@@ -83,4 +83,12 @@ public class BannerContributor implements ProjectContributor {
 * ProjectContributorを使うことによってディレクトリ構成などをカスタマイズすることができる
 * このinitializrで実際にプロジェクトを生成すると、resources直下にbanner.txtが生成され、Spring Boot起動時のバナーを変更される
 
+### 参考文献
 
+* [Spring Initializrの公式リファレンス](https://docs.spring.io/initializr/docs/current/reference/html/#initializr-documentation)
+←これを読むのが一番わかり易い
+* [Creating "The Second Best Place on the Internet" with Spring Initializr](https://www.slideshare.net/Pivotal/creating-the-second-best-place-on-the-internet-with-spring-initializr/Pivotal/creating-the-second-best-place-on-the-internet-with-spring-initializr)
+←Stéphane Nicoll(Spring Initializrのコントリビューター）による発表。Spring Initializrのカスタマイズのデモがある。
+* [上の発表のときのデモコード](https://github.com/snicoll/demo-custom-initializr)
+* [How to customize the Spring Initializr](https://medium.com/digitalfrontiers/how-to-customize-the-spring-initializr-2439ecabb069)
+←　BuildCustomizerなどを実際に使っている
