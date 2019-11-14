@@ -57,5 +57,30 @@ public class SampleProjectGenerationConfiguration {
     }
 }
 ```
-* BuildCustomizerを使うことによって、build時のカスタマイズができる。実際にこのカスタマイズしたinitializrでプロジェクトを生成すると、自動でdevtoolsが依存関係に追加される
+* BuildCustomizerを使うことによって、build時のカスタマイズができる。
+* 実際にこのinitializrでプロジェクトを生成すると、自動でdevtoolsが依存関係に追加される
+
+```java
+public class BannerContributor implements ProjectContributor {
+    public void contribute(Path projectRoot) throws IOException {
+        Path bannerDirectory = projectRoot
+                .resolve("src/main/resources");
+        Files.createDirectories(bannerDirectory);
+        Path file =Files.createFile(bannerDirectory.resolve("banner.txt"));
+        try (PrintWriter writer = new PrintWriter(Files.newBufferedWriter(file))) {
+            writer.println(
+                    "   _____   _       _   _            \n" +
+                            "  / ____| | |     (_) | |           \n" +
+                            " | |      | |__    _  | | __   __ _ \n" +
+                            " | |      | '_ \\  | | | |/ /  / _` |\n" +
+                            " | |____  | | | | | | |   <  | (_| |\n" +
+                            "  \\_____| |_| |_| |_| |_|\\_\\  \\__,_|\n"
+            );
+        }
+    }
+}
+```
+* ProjectContributorを使うことによってディレクトリ構成などをカスタマイズすることができる
+* このinitializrで実際にプロジェクトを生成すると、resources直下にbanner.txtが生成され、Spring Boot起動時のバナーを変更される
+
 
