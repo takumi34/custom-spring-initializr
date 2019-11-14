@@ -1,0 +1,35 @@
+initializr:
+  dependencies:
+    - name: Web
+      content:
+        - name: Web
+          id: web
+          description: webだよ！！！
+  types:
+    - name: Maven Project
+      id: maven-project
+      description: mvn
+      tags:
+        build: maven
+        format: project
+      default: true
+      action: /starter.zip
+    - name: Gradle Project
+      id: gradle-project
+      description: Generate a Gradle based project archive
+  packagings:
+    - name: Jar
+      id: jar
+      default: true
+  javaVersions:
+    - id: 11
+      default: true
+  languages:
+    - name: Java
+      id: java
+      default: true
+    - name: Kotlin
+      id: kotlin
+      default: false
+  group-id:
+    value: org.chika
