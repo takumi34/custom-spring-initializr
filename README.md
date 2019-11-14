@@ -1,4 +1,4 @@
-# Customizing Spring Initializer
+# How to Customize Spring Initializer
 
 ## Spring Initializerのカスタムインスタンスの立ち上げ方
 1.　以下の依存関係を足す  
