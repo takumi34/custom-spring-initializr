@@ -14,9 +14,6 @@ initializr:
         format: project
       default: true
       action: /starter.zip
-    - name: Gradle Project
-      id: gradle-project
-      description: Generate a Gradle based project archive
   packagings:
     - name: Jar
       id: jar
